@@ -1,6 +1,8 @@
 @media screen and (max-width: 768px) {
     
-    /* 1. Ajuste del Header y Nav */
+    * {
+        box-sizing: border-box; /* Para que el padding no rompa el diseño */
+    }
     header {
         padding: 20px 10px;
     }
