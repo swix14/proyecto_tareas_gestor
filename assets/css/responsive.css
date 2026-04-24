@@ -1,0 +1,73 @@
+@media screen and (max-width: 768px) {
+    
+    /* 1. Ajuste del Header y Nav */
+    header {
+        padding: 20px 10px;
+    }
+
+    nav {
+        flex-direction: column; /* Enlaces uno abajo del otro */
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav a {
+        width: 80%; /* Botones más grandes para tocar con el dedo */
+        text-align: center;
+    }
+
+    /* 2. Ajuste del Formulario */
+    #formulario {
+        flex-direction: column; /* Inputs apilados verticalmente */
+        align-items: stretch;
+        width: 95%;
+        gap: 10px;
+    }
+
+    #formulario label {
+        margin-top: 5px;
+    }
+
+    /* 3. ¡EL TABLERO! (La parte más importante) */
+    .tablero {
+        flex-direction: column; /* Las columnas de lado a lado -> Arriba a abajo */
+        align-items: center;
+        padding: 10px;
+        gap: 30px; /* Más espacio entre columnas para que no se mezclen */
+    }
+
+    .columna {
+        width: 100%; /* Que ocupen todo el ancho disponible */
+        max-width: 500px; /* Pero que no se vean gigantes en tablets */
+        min-height: auto; /* Que su largo dependa de las tareas que tenga */
+    }
+
+    /* 4. Tarjetas de tareas */
+    .tarea-card {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .tarea-card button {
+    width: 100%; /* Botones a lo ancho para que sea fácil clickear con el dedo */
+    margin-bottom: 5px;
+}
+
+    /* 5. Footer */
+    footer {
+        padding: 30px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Ajuste extra para celulares muy pequeños (iPhone SE, etc) */
+@media screen and (max-width: 480px) {
+    #titulo h1 {
+        font-size: 1.5rem;
+    }
+    
+    img {
+        width: 60px;
+        height: 60px;
+    }
+}

@@ -1,29 +1,200 @@
-body {
+* {
     font-family: 'Segoe UI', system-ui, sans-serif;
     margin: 0px;
     padding: 0px;
+    scroll-behavior: smooth;
 }
 
 header {
     background: linear-gradient(45deg, #10b981, #7c3aed, #2563eb);
+    padding: 10px;
 }
 
-nav {
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 50px;
-    margin-left: 400px;
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease
+  }
+
+  nav a:hover {
+    background-color: white;
+    color: #10b981;
+    border-radius: 5px;
+    transform: translateY(-5px);
+  }
+
+  #titulo {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  form {
+    background-color: #eeeded;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  textarea {
+    resize: none;
+    height: 40px;
+  }
+
+  .tarea-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #ccc;
+    transition: transform 0.2s ease;
+    align-items: center;
+  }
+
+  .tarea-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .prioridad-alta {border-color: #ef4444;}
+  .prioridad-media {border-color: #f59e0b;}
+  .prioridad-baja {border-color: #10b981;}
+
+
+#formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-#titulo{
-    display: inline-block;
-    vertical-align: top;
+.tablero {
+    display: flex;
+    justify-content: space-between; /* Espacio igual entre columnas */
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start; /* Evita que las columnas se estiren raro */
+}
+
+/* Estilo de cada columna vertical */
+.columna {
+    flex: 1; /* Hace que todas las columnas tengan el mismo ancho */
+    background-color: #f4f5f7; /* Gris claro de fondo tipo Kanban */
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 70vh; /* Altura mínima para que se vean largas */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.columna h3 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#agregar{
+     background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);;
+    transition: transform 0.2s ease;
+}
+
+#agregar:hover {
+    transform: translateY(-5px);
+    background-color: #10b981;
+    color: white;
+}
+
+#prioridad {
+     background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);;
+    transition: transform 0.2s ease;
+}
+
+#prioridad:hover {
+    transform: translateY(-5px);
+}
+
+#descripcion {
+     background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);;
+    transition: transform 0.2s ease;
+}
+
+#descripcion:hover {
+    transform: translateY(-5px);
+}
+
+#fecha {
+     background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);;
+    transition: transform 0.2s ease;
+}
+
+#fecha:hover {
+    transform: translateY(-5px);
+}
+
+#pendientes {
+    border-top: 5px solid #2563eb;
+}
+#pendientes h3 {
+    color: #2563eb;
+}
+
+#en-progreso {
+    border-top: 5px solid #f59e0b;
+}
+#en-progreso h3 {
+    color: #f59e0b;
+}
+
+#completadas {
+    border-top: 5px solid #10b981;
+}
+#completadas h3 {
+    color: #10b981;
+}
+
+footer {
+    background-color: #202125;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
     margin-top: 20px;
-    color : white;
-    font-size: 40px;
 }
 
-img{
-    width: 100px;
-    height: 100px;;
-}   
+footer a {
+    color: #10b981;
+    font-weight: bold;
+    text-align: center;
+}

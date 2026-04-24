@@ -1,20 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-CL">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="icon" href="assets/img/logo.png">
+    <title>Task Flow</title>
 </head>
 <body>
     <header>
-        <img src="assets/img/logo.png" alt="Task Manager Logo">
-        <h1 id="titulo">Task Manager</h1>
-        <nav>
-        <a href="#">Home</a>
-        <a href="#">Tareas</a>
-        <a href="#">Contactos</a>
-        </nav>
-    </header>
+    <div id="titulo">
+        <img src="assets/img/logo.png" alt="logo">
+        <h1>Task Flow</h1>
+    </div>
+    <nav>
+        <a href="#main">Tareas</a>
+        <a href="#footer">Contactos</a>
+    </nav>
+</header>
+        <form id="formulario">
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" required></textarea>
+
+        <label for="prioridad">Prioridad:</label>
+        <select id="prioridad" required>
+            <option value="">Seleccionar...</option>
+            <option value="Alta">Alta</option>
+            <option value="Media">Media</option>
+            <option value="Baja">Baja</option>
+        </select>
+
+        <label for="fecha">Fecha límite:</label>
+        <input type="date" id="fecha" required>
+
+        <button type="submit" id="agregar">Agregar Tarea</button>
+        </form>
+        
+        <!-------->
+    <main>
+    <div id="main" class="tablero">
+        <div class="columna" id="pendientes">
+            <h3>Pendientes: <span class="contador">0</span></h3>
+        <div class="tareas-container"></div>
+        </div>    
+
+        <div class="columna" id="en-progreso">  
+            <h3>En Progreso: <span class="contador">0</span></h3>
+            <div class="tareas-container"></div>
+        </div>
+    
+
+        <div class="columna" id="completadas">
+            <h3>Completadas: <span class="contador">0</span></h3>
+            <div class="tareas-container"></div>
+         <div>   
+        </div>
+    </main>
+    <footer id ="footer">
+        <p>&copy; 2024 Task Flow. Todos los derechos reservados.</p>
+        <p>GitHub: <a href="https://github.com/swix14" target="_blank">swix.14</a></p>
+    </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
