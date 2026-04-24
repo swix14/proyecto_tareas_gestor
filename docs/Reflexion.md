@@ -1,0 +1,2 @@
+
+Interesante evaluación que me demostró de lo que uno puede llegar a crear con conocimiento, pese al uso de IA para ayuda de mi proyecto me quedo con los conceptos claros de lo que me dijo que se que me serán de utilidad mas adelante para poder usarlos por mi propia cuenta y poder cada vez menos de la IA
