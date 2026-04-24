@@ -1,0 +1,16 @@
+body {
+    background-color: blue;
+}
+#titulo{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 125px;;
+}
+
+img{
+    width: 300px;
+    height: 300px;;
+    border-color:black;
+    border-width: 2px;
+    border-style: solid;
+}
